@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #banner-img{
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <header class="container">
+        <h1 class="mt-5 mb-2 text-body fw-bolder">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, maxime!</h1>
+        <img id="banner-img" class="" src="https://plus.unsplash.com/premium_photo-1691954120246-e2586bf209e5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8" alt="">
+        <p class="mt-2 text-body-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus eligendi delectus error nulla totam, tenetur maxime necessitatibus repudiandae dolore nisi possimus adipisci sit neque architecto nostrum odio molestias animi doloribus sequi praesentium quaerat aspernatur voluptatibus eum voluptas. Perspiciatis, qui! Molestiae, iste. Esse nihil cum nemo.</p>
+    </header>
+    <main class="container">
+        <h2 class="text-center mt-5 mb-2 text-body fw-bold">Open Positions</h2>
+        <p class="text-center text-body-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus eligendi delectus error nulla totam, tenetur maxime necessitatibus repudiandae dolore nisi possimus adipisci sit neque.</p>
+        <article class="data">
+            {%for job in jobs%}
+                {%include 'jobitem.html'%}
+            {%endfor%}
+        </article>
+    </main>
+    <footer class="container text-center">
+        <button class="contact-us mt-4 mb-2 btn btn-primary text-nowrap">Contact Us</button>
+        <p class="fs-6 text-body">Lorem Copyright 2025</p>
+    </footer>
+</body>
+</html>

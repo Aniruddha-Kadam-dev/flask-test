@@ -1,0 +1,11 @@
+<section class="row align-items-start mb-3 p-3 bg-light border rounded">
+    <div class="col-10">
+        <h4 class="text-body">{{job['title']}}</h4>
+        <p class="m-0 text-body-secondary">Location: {{job['location']}}</p>
+        <p class="m-0 text-body-secondary">Mode: {{job['mode']}}</p>
+        {%if 'salary' in job%}
+        <p class="m-0 text-body-secondary">Salary: {{job['salary']}}</p>
+        {%endif%}
+    </div>
+    <button class="btn btn-outline-primary col-2" type="button">Apply</button>
+</section>
